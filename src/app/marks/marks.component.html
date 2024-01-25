@@ -1,0 +1,22 @@
+<p>marks works!</p>
+<div>
+<table border="1">
+    <thead>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+        <th>Result</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+        <td>{{user.Name}}</td>
+        <td>{{user.Subject}}</td>
+        <td [ngStyle]="{ 'color': user.Marks<35?'red':'green'}">{{user.Marks}}</td>
+        <td [ngClass]="{'red':user.Marks<35,'green':user.Marks>35}">{{user.Result}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h1>{{today}}</h1>
+

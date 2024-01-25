@@ -1,0 +1,28 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    cursor: pointer;
+    
+    
+    
+    
+}
+.child1{
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+    text-align: center;
+
+}
+.child2{
+    width: 70%;
+    height: 100%;
+    background-color:brown;
+    overflow: auto;
+
+}
+h3:hover{
+    background-color: white;
+
+}
