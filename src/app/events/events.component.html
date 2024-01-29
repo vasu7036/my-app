@@ -1,0 +1,15 @@
+<h1>Event Resigistration</h1>
+<input type="text"  [(ngModel)]="inputText">
+<button (click)="submit()">Submit</button><br>
+<br>
+<h1>Resigistration Users</h1>
+
+<ol>
+    <li *ngFor="let name of arr ; let i=index">{{name}}
+        <button class="btn" (click)="delete(i)">delete</button>
+
+    </li>
+</ol>
+
+
+

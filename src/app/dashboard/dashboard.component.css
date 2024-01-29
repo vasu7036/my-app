@@ -7,16 +7,18 @@
     
     
     
+    
 }
 .child1{
-    width: 30%;
+    width: 20%;
     height: 100%;
     background-color: blue;
     text-align: center;
+    overflow: auto;
 
 }
 .child2{
-    width: 70%;
+    width: 80%;
     height: 100%;
     background-color:brown;
     overflow: auto;

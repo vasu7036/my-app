@@ -16,6 +16,13 @@ import { TableComponent } from './table/table.component';
 import { MarksComponent } from './marks/marks.component';
 import { PricePipe } from './price.pipe';
 import { StarPipe } from './star.pipe';
+import { EventsComponent } from './events/events.component';
+import { VechileComponent } from './vechile/vechile.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +39,19 @@ import { StarPipe } from './star.pipe';
     MarksComponent,
     PricePipe,
     StarPipe,
+    EventsComponent,
+    VechileComponent,
+    AccountComponent,
+    FlipkartComponent,
+    MailComponent,
+    EmployeeComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

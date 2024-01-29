@@ -1,0 +1,50 @@
+<input type="text" placeholder="search" [(ngModel)]="term">
+<button (click)="filter()">filter</button>
+<select name="" id="" [(ngModel)]="column">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+
+</select>
+<button (click)="sort()">sort</button>
+
+<label for="">select page:</label>
+<select [(ngModel)]="page" (change)="pagenation()">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+<table>
+    <thead>
+        <tr>
+            <th>vechicle</th>
+            <th>manufacture</th>
+            <th>modal</th>
+            <th>type</th>
+            <th>color</th>
+            <th>fuel</th>
+            <th>image</th>
+            <th>id</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vechile of vechicles">
+            <td>{{vechile.Vehicle}}</td>
+            <td>{{vechile.manufacturer}}</td>
+            <td>{{vechile.model}}</td>
+            <td>{{vechile.type}}</td>
+            <td>{{vechile.color}}</td>
+            <td>{{vechile.fuel}}</td>
+            <td>
+            <img src="{{vechile.image}}" alt="" width="100px" height="100px">
+            </td>
+            <td>{{vechile.id}}</td>
+            
+            <td>
+                <button (click)="delete(vechile.id)">"delete"</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

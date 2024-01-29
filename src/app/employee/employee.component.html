@@ -1,0 +1,33 @@
+<div class="parent">
+    <div class="top">
+        <button>Exp low to high</button>
+        <button>Exp high to low</button>
+        <button>package low to high</button>
+        <button>package high to low</button>
+        <button>add 20%hike</button>
+        <button>50000bonus</button>
+    </div>
+    <div class="bottom">
+        <table>
+            <thead>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Experience</th>
+                <th>package</th>
+                <th>working employee</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employer of employe">
+                    <td>{{employer.Sno}}</td>
+                    <td>{{employer.Name}}</td>
+                    <td>{{employer.Company}}</td>
+                     <td>{{employer.Experience}}</td>
+                    <td>{{employer.package}}</td>
+                    <td>{{employer.workingemployee}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

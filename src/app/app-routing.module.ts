@@ -10,6 +10,12 @@ import { CircleComponent } from './circle/circle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MarksComponent } from './marks/marks.component';
 import { TableComponent } from './table/table.component';
+import { EventsComponent } from './events/events.component';
+import { VechileComponent } from './vechile/vechile.component';
+import { AccountComponent } from './account/account.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -20,7 +26,14 @@ const routes: Routes = [
     {path:'circle',component:CircleComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'marks',component:MarksComponent},
-    {path:'table',component:TableComponent}
+    {path:'table',component:TableComponent},
+    {path:'events',component:EventsComponent},
+    {path:'vechile',component:VechileComponent},
+    {path:'account',component:AccountComponent},
+    {path:'flipkart',component:FlipkartComponent},
+    {path:'mail',component:MailComponent},
+    {path:'employee',component:EmployeeComponent}
+    
   ]},
   {path:'', component:LoginComponent},
   {path:'**' ,component:PageNotFoundComponent}
