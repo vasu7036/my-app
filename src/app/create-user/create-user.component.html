@@ -1,0 +1,43 @@
+<form action="">
+    <label for="">name:</label>
+    <input type="text" formControlName="name"><br>
+
+    <label for="">email</label>
+    <input type="email" formControlName="email"><br>
+
+    <label for="">age</label>
+    <input type="number" formControlName="age"><br>
+
+    <label for="">phone:</label>
+    <input type="number" formControlName="phone">
+
+    <button (click)="submit">submit</button>
+
+<label for="">cards</label>
+<button (click)="add()">add</button>
+
+<div formArrayName="cards">
+   <div *ngFor="let card of cardsFormAarry.controls;let i=index">
+       <div formGroupName="{{i}}">
+
+        <h1>card{{i+1}}</h1>
+           <label for="">card no:</label>
+           <input type="number" formControlName="cardno">
+           <br>
+           <label for="">expairy:</label>
+           <input type="number" formControlName="expairy">
+           <br>
+           <label for="">cvv</label>
+           <input type="number" formControlName="cvv">
+           <br>
+           <button (click)="deletecard(i)">delete</button>
+
+           <hr>
+       </div>
+   </div>
+</div>
+
+<button (click)="submit()">submit</button>
+</form>
+
+

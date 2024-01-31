@@ -1,4 +1,17 @@
-<table>
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="filter()">
+<button (click)="filter()">filter</button>
+<select name="" id=""[(ngModel)]="column">
+    <option value="fuel">Fuel</option>
+    <option value="color">Color</option>
+</select>
+<select name="" id="" [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+
+</select>
+<button (click)="filter()">search</button>
+
+<table class="table table-dark">
     <thead>
         <tr>
             <th>id</th>

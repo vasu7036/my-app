@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -16,10 +16,16 @@ import { AccountComponent } from './account/account.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { CreateVechileComponent } from './create-vechile/create-vechile.component';
+import { CreateAccountService } from './create-account.service';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { StudentsComponent } from './students/students.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent, children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard],component:DashboardComponent, children:[
     {path:'home',component:HomeComponent},
     {path:'about',component:AboutComponent},
     {path:'calculator',component:CalculatorComponent},
@@ -32,7 +38,11 @@ const routes: Routes = [
     {path:'account',component:AccountComponent},
     {path:'flipkart',component:FlipkartComponent},
     {path:'mail',component:MailComponent},
-    {path:'employee',component:EmployeeComponent}
+    {path:'employee',component:EmployeeComponent},
+    {path:'createvechile',component:CreateVechileComponent},
+    {path:'createaccount',component:CreateAccountsComponent},
+    {path:'students',component:StudentsComponent},
+    {path:'createuser',component:CreateUserComponent}
     
   ]},
   {path:'', component:LoginComponent},

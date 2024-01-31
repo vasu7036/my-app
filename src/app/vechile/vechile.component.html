@@ -1,6 +1,10 @@
 <input type="text" placeholder="search" [(ngModel)]="term">
 <button (click)="filter()">filter</button>
-<select name="" id="" [(ngModel)]="column">
+<select name="" id=""[(ngModel)]="column">
+    <option value="fuel">Fuel</option>
+    <option value="color">Color</option>
+</select>
+<select name="" id="" [(ngModel)]="order">
     <option value="asc">Ascending</option>
     <option value="desc">Descending</option>
 
@@ -9,7 +13,7 @@
 
 <label for="">select page:</label>
 <select [(ngModel)]="page" (change)="pagenation()">
-    <option>1</option>
+    <option value="0">1</option>
     <option>2</option>
     <option>3</option>
     <option>4</option>

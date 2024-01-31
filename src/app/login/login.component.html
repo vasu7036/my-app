@@ -1,9 +1,12 @@
 <div class="parent">
-    <div class="child">
+    <div class="child" [formGroup]="loginForm">
+
     <label for="">Email:</label>
-    <input type="email" ><br>
+    <input type="text" formControlName="email"><br>
+
     <label for="">Password:</label>
-    <input type="password" style="margin-top: 10px;"><br>
-    <button routerLink="/dashboard" style="margin-top: 30px; margin-left: 80px;">LOGIN</button>
+    <input type="password" formControlName="password"><br>
+    
+    <button (click)="login()">LOGIN</button>
 </div>
 </div>

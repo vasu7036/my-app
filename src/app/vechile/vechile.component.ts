@@ -11,9 +11,9 @@ export class VechileComponent {
 
   public term:string='';
 
-  public column:string='';
+  public column:string='fuel';
 
-  public order:string='';
+  public order:string='desc';
 
   public page:number= 0;
 

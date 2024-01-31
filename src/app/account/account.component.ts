@@ -11,6 +11,13 @@ import { AccountService } from '../account.service';
 export class AccountComponent {
 
   public accounts:any=[]
+
+  public term:string='';
+
+  public column:string='';
+
+  public order:string='';
+
   constructor(private _accountService:AccountService) { 
     _accountService.getaccounts().subscribe(
       (data:any)=>{
@@ -23,6 +30,25 @@ export class AccountComponent {
     )
 
   }
+  filter(){
+    this._accountService.getfilteredaccounts(this.column,this.order).subscribe(
+      (data:any)=>{
+        this.accounts=data;
+      },
+      (err:any)=>{
+        alert("error")
+      }
+    )
+  }
+  // sort(){
+  //   this._accountService.(this.column,this.order).subscribe(
+  //     (data:any)=>{
+  //       this.vechicles=data;
+  //     },
+  //     (err:any)=>{
+  //       alert("error")
+  //     }
+  //   )
 
  
 }
